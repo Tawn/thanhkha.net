@@ -27,28 +27,20 @@
     border-bottom: 3px solid rgb(51, 118, 234);
 }
 
-.interior {
-    padding: 50px 25px;
-    width: 100%;
-    display: block;
+
+body {
+    padding: 75px 50px 0px 0px;
 }
 
 table {
     width: 100%;
-    padding: 50px;
-    text-align: center;
 }
-img {
+
+#profile-photo {
     border-radius: 50%;
 }
 
-
-
-
-@media only screen and (max-width: 750px) {
-    body {
-      background-color: lightblue;
-    }
+@media only screen and (max-width: 800px) {
     
     img {
         width: 100%;
@@ -61,5 +53,9 @@ img {
 
     .interior {
         padding: 40px 15px;
+    }
+
+    .nav-bar li a {
+        font-size: 80%;
     }
   }
