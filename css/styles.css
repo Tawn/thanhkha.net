@@ -1,102 +1,57 @@
-.nav-bar ul {
-    width: 100%;
-    position: fixed;
-    list-style-type: none;
-    top: 0;
+html, body {
+    height: 100%;
+    max-width: 1000px; /* Set the maximum width of the container */
+    margin: 0 auto; 
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #666666;
+    padding: 20px;
+}
+
+.navbar-right ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: steelblue;
-    border: 1px solid e7e7e7;
+    display: flex;
 }
 
-.nav-bar li {
-    float: left;
-}
-
-.nav-bar li a {
-    display: block;
-    color: white;
-    text-emphasis: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.nav-bar a:hover {
-    border-bottom: 3px solid white;
-}
-
-.active {
-    border-bottom: 3px solid white;
-}
-
-body {
-    color: white;
-}
-
-table {
-    width: 100%;
-    text-align: left;
-    background-color: steelblue;
-}
-
-#profile-photo {
-    border-radius: 50%;
-}
-
-p {
-    color: white;
-    font-size: 19px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-h2, h3, dt{
-    color: lightgrey;
-}
-
-#contents {
-    padding-top: 75px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 25px;
-}
-
-@media only screen and (max-width: 1000px) {
+.navbar-right ul li {
+    margin: 20px;
     
-    p {
-        font-size: 17px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
+}
 
-    img {
-        width: 100%;
-        height: auto;
-    }
+.navbar-item {
+    text-decoration: none;
+    color: #666666;
+}
 
-    table {
-        padding: 25px;
-    }
+.navbar-item:hover {
+    text-decoration: underline;
+    color: #87CEEB;
+    font-weight: bold;
 
-    .interior {
-        padding: 40px 15px;
-    }
+}
 
-    .nav-bar li a {
-        font-size: 70%;
-    }
+.navbar-item-selected{
+    text-decoration: underline;
+    color: #87CEEB;
+    font-weight: bold;
 
-    #contents {
-        padding-top: 50px;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-bottom: 5px;
-    }
-  }
+}
 
-  @media only screen and (max-width: 350px) {
-    .nav-bar li a {
-        font-size: 50%;
-    }
+.navbar-brand {
+    text-decoration: none;
+    color: #87CEEB;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 24px;
+}
 
-  }
+.content {
+    display: flex;
+    padding: 20px;
+    height: 100%;
+}

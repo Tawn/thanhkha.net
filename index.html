@@ -4,100 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>My Personal Webpage</title>
+    <title>Thanh Kha's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/about-styles.css">
 </head>
-
 <body>
-    <div class="nav-bar">
-        <ul id="nav-bar-list">
-            <li><a href="#about-me" class="active">About</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="experience.html">Experiences</a></li>
-            <li><a href="contact.html">Conact</a></li>
-        </ul>
-    </div>
-    
-    <div class="interior">
-        <div id="about-me" title="about-me">
-            
-            <table>
-                <tr class="profile-photo">
-                    <th>
-                        <div>
-                            <img src="/images/profile.jpg" id="profile-photo">
-                        </div>
-                    </th>
-                    <th>
-                        <h2>Thanh Kha</h2>
-                        <h3>Software Engineer</h3>
-                    </th>
-                </tr>
-            </table>
-
-            <dl>
-            <dt>Senior Software Engineer (Dec 2019 - Current)</dt>
-                    <dd>- Software development</dd>
-                    <dd>- Debugging</dd>
-                    <dd>- Unit testing</dd>
-                    <dd>- Enhancements</dd>
-                    <dd>- Automate tasks</dd>
-                    <dd>- SCRUM</dd>
-
-            <dt>Test/Integration Engineer (Dec 2019 - Current)</dt> 
-                    <dd>- Produce and execute verificaiton procedures based on SRSs</dd>
-                    <dd>- Deliver system at customer site</dd>
-                    <dd>- Report and verify discrepancies and fixes</dd>
-                    <dd>- Engage with customer</dd>
-                    <dd>- Manage testers and executions of tests</dd>
-                    <dd>- Fill various roles from tester and manager</dd>
-            </dl>
+    <nav>
+        <div class="navbar-left">
+            <a class="navbar-brand" href="#">Thanh Kha</a>
         </div>
-
-        <div id="experiences" title="experiences">
-            <dl title="languages">
-                <h3>Languages</h3>
-                <dt>Java</dt>
-                <div class="w3-container w3-round-large w3-blue" style="width:75%">75%</div>
-                <dt>Python</dt>
-                <div class="w3-container w3-round-large w3-blue" style="width:66%">66%</div>
-                <dt>HTML/CSS</dt>
-                <div class="w3-container w3-round-large w3-blue" style="width:75%">75%</div>
-                <dt>JavaScript</dt>
-                <div class="w3-container w3-round-large w3-blue" style="width:66%">66%</div>
-                <dt>Bash</dt>
-                <div class="w3-container w3-round-large w3-blue" style="width:75%">75%</div>
-            </dl>
-            <dl title="operating-systems">
-                <h3>OS</h3>
-                <dt>Windows</dt>
-                <dt>MacOS</dt>
-                <dt>Linux</dt>
-            </dl>
-            <dl title="Other technical">
-                <h3>Other</h3>
-                <dt>RF Engineering</dt>
-                <dd>Operated RF Equipment</dd>
-                <dt>Networks</dt>
-                <dd>Test network capabilities</dd>
-            
-            </dl>
+        <div class="navbar-right">
+            <ul class="navbar-right">
+                <li><a href="#" class="navbar-item" id="about" onclick="navbarSelect(event, 'about')">About</a></li>
+                <li><a href="#" class="navbar-item" id="experience" onclick="navbarSelect(event, 'experiences')">Experiences</a></li>
+                <li><a href="#" class="navbar-item" id="project" onclick="navbarSelect(event, 'projects')">Projects</a></li>
+                <li><a href="#" class="navbar-item" id="contact" onclick="navbarSelect(event, 'contact')">Contact</a></li>
+            </ul>
         </div>
+    </nav>
+    <div class="content" id="content-frame"></div>
 
-        <div id="links" title="links">
-            <h3>Links</h3>
-            <i class="fa fa-linkedin-square" style="font-size:24px;color:#0A66C2"><a href="https://www.linkedin.com/in/thanhkha/"> linkedin.com/in/thanhkha/</a></i><br>
-            <i class="fa fa-github" style="font-size:24px;color:#4078c0"><a href="https://github.com/Tawn"> github.com/Tawn</a></i>
-            
-        </div>
-
-        <div id="contact-me" title="contact-me">
-            <h3>Contact</h3>
-            tkha@live.com
-        </div>
-    </div>
-
+    <script src="scripts/content.js"></script>
 </body>
 </html>
