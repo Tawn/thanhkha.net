@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    max-width: 900px; /* Set the maximum width of the container */
+    max-width: 1400px; 
     margin: 0 auto; 
 }
 nav {
@@ -20,6 +20,7 @@ nav {
 
 .navbar-right ul li {
     margin: 20px;
+    font-size: 16px;
     
 }
 
@@ -30,21 +31,21 @@ nav {
 
 .navbar-item:hover {
     text-decoration: underline;
-    color: #87CEEB;
+    color: #005470;
     font-weight: bold;
 
 }
 
 .navbar-item-selected{
     text-decoration: underline;
-    color: #87CEEB;
+    color: #005470;
     font-weight: bold;
 
 }
 
 .navbar-brand {
     text-decoration: none;
-    color: #87CEEB;
+    color: #005470;
     font-family: cursive;
     font-weight: bold;
     font-size: 24px;
@@ -57,6 +58,10 @@ nav {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     color: #393939;
+}
+
+p {
+    font-size: 16px;
 }
 
 @media screen and (max-width: 1000px) {

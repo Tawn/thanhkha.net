@@ -7,7 +7,7 @@
 .experiences_center_div {
     display: block;
     text-align: center;
-    width: 75%;
+    width: 700px;
 }
 
 .experiences_header_div {
@@ -16,7 +16,7 @@
 }
 
 .experiences_image {
-    width: 675px;
+    width: 700px;
     height: 500px;
 }
 
