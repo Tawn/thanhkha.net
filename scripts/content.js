@@ -78,7 +78,7 @@ function displayAbout() {
     + "I'm also a U.S. Marine Veteran, having served four years and stationed at Camp Lejeune, North Carolina. "
     + "Following my military service, I pursued a B.S. degree in Computer Science at the University of Rochester. "
 	+ "Currently, I am employed as a Senior Software Engineer at Lockheed Martin, Space. "
-    + "In my current role, I am leading a team in Japan to deliver our Space-over-satellite LTE system. "
+    + "In my current role, I am leading a team in Japan to deliver our LTE-over-space satellite system. "
 	+ "I have a passion for coding, working with various technologies, and working with others to accomplish the same goals and to learn from one another. "
     + "I wish to continue to grow in the technology industry and become an awesome Engineer. ";
 
@@ -148,19 +148,14 @@ function displayExperiences() {
         var descDiv = document.createElement('div');
         descDiv.classList.add('experiences_desc_div');
         var desc1 = document.createElement('p');
-        desc1.textContent = "I'm currently in Japan, leading the test plans and executions for the delivery of our product. "
-            + "Every day is always a challenge to satisfy the customer and execute the plan as quickly and efficiently as possible. "
-            + "The team I lead consists mostly of new members whom I train to operate the system and guide in executing tasks. "
-            + "I am considered the SME (Subject-Matter Expert) on the UE (User Equipment) and the overall system, "
-            + "so I directly handle the customers' daily technical questions. "
-            + " The best part of all this is being able to travel all around Japan sharing this experience with others. "
+        desc1.textContent = "I started working at Lockheed Martin after graduating from college in 2019, initially as an Associate Software Engineer. "
+        + "My role involved developing system web interfaces for monitoring and controlling the first LTE-over-space satellite system. "
+        + "I was responsible for testing and integrating system features. Over time, I have advanced to the position of Senior Software Engineer and Test Lead here in Japan. "
+        + "I am considered the Subject Matter Expert (SME) for the overall system and user equipment (UE).";
         var desc2 = document.createElement('p');
-        desc2.textContent = "I automate many of the repetitive tasks I encounter on a daily basis by creating software tools. "
-            + "Since our system is Linux-based, automating system operations is typically accomplished through bash or Python scripts. "
-            + "Another tool I developed, called 'directors_tool,' is specifically designed for automating daily tasks and generating summaries. "
-            + "I have shared this tool on my Projects page. "
-            + "'directors_tool' saves me a significant amount of time when documenting tasks and allows me to easily track their statuses. "
-            + "Building various tools has become essential to manage the numerous moving parts involved in my everyday responsibilities." 
+        desc2.textContent = "I have gained a wealth of experience in various aspects of the LTE-over-space satellite system. "
+        + "This includes working with Network Equipment (NWE), Radio Frequency Equipment (RFE), and core algorithms such as the MAC scheduler. "
+        + "Additionally, I have taken on the responsibility of Test Director, managing our customers and team on a daily basis."; 
         
         // Append description 
         descDiv.appendChild(desc1);
@@ -181,7 +176,7 @@ function displayExperiences() {
         var desc3 = document.createElement('p');
         desc3.textContent = "Prior to my time in Japan, I gained extensive experience in creating verification procedures and collaborating closely with developers to verify and debug various aspects of the system specifications and capabilities. "
             + "This involved possessing a broad knowledge and understanding of the LTE-Over-Space Satellite system. "
-            + "A significant portion of my time was dedicated to analyzing packet flows using tools like Wireshark and manipulating signals on the RFE (Radio Frequency Equipment). "
+            + "A significant portion of my time was dedicated to testing capabilities, analyzing packet flows using tools like Wireshark, and manipulating signals on the RFE (Radio Frequency Equipment). "
         var desc4 = document.createElement('p');
         desc4.textContent = "I took on the role of GUI developer, responsible for creating the monitoring and control interface for the system. "
             + "Leveraging the SCRUM methodology for development, our team followed a structured approach with weekly sprints that included daily status meetings, code reviews, and code deliveries. "
