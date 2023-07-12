@@ -74,11 +74,13 @@ function displayAbout() {
 
     // (Intro - Greeting Message) P
     var p1 = document.createElement('p');
-    p1.textContent = "I am currently employed at Lockheed Martin, Space, where I have the opportunity to work on cutting-edge technology. "
-        + "I have always had a passion for working with technology, and I feel incredibly grateful to be part of the team involved in developing new breakthroughs. "
-        + "I've been in Japan since early 2022, working on delivering the first LTE-Over-Space Satellite system. "
-        + "It's an amazing feeling to see many years of dedicated work prior to now seeing the system in action that will "
-        + "serve a whole country and save lives. ";
+    p1.textContent = "I was born and raised in Massachusetts and now living in Japan for my work. "
+    + "I'm also a U.S. Marine Veteran, having served four years and stationed at Camp Lejeune, North Carolina. "
+    + "Following my military service, I pursued a B.S. degree in Computer Science at the University of Rochester. "
+	+ "Currently, I am employed as a Senior Software Engineer at Lockheed Martin, Space. "
+    + "In my current role, I am leading a team in Japan to deliver our Space-over-satellite LTE system. "
+	+ "I have a passion for coding, working with various technologies, and working with others to accomplish the same goals and to learn from one another. "
+    + "I wish to continue to grow in the technology industry and become an awesome Engineer. ";
 
     // (Intro - Greeting Contact) P
     var p2 = document.createElement('p');
