@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Restore Session
     const data = sessionStorage.getItem('selection');
     if (data != null) 
-        navbarSelect(data)
+        navbarSelect(data);
     else
         displayAbout();
 });
@@ -34,7 +34,7 @@ function display(selection) {
     mainframe.innerHTML = '';
 
     // Store session selection
-    sessionStorage.setItem('selection', 'about');
+    sessionStorage.setItem('selection', selection);
 
     // Display Selected Content
     switch (selection) {
@@ -198,7 +198,7 @@ function displayExperiences() {
         var h1 = document.createElement('h1');
         h1.textContent = "Unversity of Rochester";
         var h3 = document.createElement('h3');
-        h3.textContent = "B.S. Computer Science, TA Workshop leader (2015 - 2019)";
+        h3.textContent = "B.S. Computer Science, TA Workshop Leader (2015 - 2019)";
 
         // Append Headers to Header Div  
         headerDiv3.appendChild(h1);
@@ -243,7 +243,7 @@ function displayExperiences() {
         var h1 = document.createElement('h1');
         h1.textContent = "United States Marine Corps";
         var h3 = document.createElement('h3');
-        h3.textContent = "0612 - Field Wireman (2011 - 2015)";
+        h3.textContent = "MOS: 0612 - Field Wireman (2011 - 2015)";
 
         // Append Headers to Header Div  
         headerDiv3.appendChild(h1);
@@ -285,12 +285,89 @@ function displayExperiences() {
         
 }
 function displayProjects() {
+    // Projects Main Div
+    var projectstDiv = document.createElement('div');
+    projectstDiv.classList.add('projects_main_div');
+
+    // Title Header
     var header = document.createElement('h1');
     header.textContent = "Projects";
-    mainframe.appendChild(header)
+
+    // Append Title Header
+    projectstDiv.appendChild(header);
+
+    // GitHub
+    var githubDiv = document.createElement('div');
+    githubDiv.classList.add('contact_linkedin_div');
+    var githubH4 = document.createElement('h4');
+    githubH4.textContent = "GitHub:"
+    var githubA = document.createElement('a');
+    githubA.href = "https://github.com/Tawn";
+    githubA.textContent = "https://Github.com/Tawn";
+
+    // Append LinkedIn
+    githubDiv.appendChild(githubH4);
+    githubDiv.appendChild(githubA);
+    projectstDiv.appendChild(githubDiv);
+
+    // Append Projects Div
+    mainframe.appendChild(projectstDiv);
 }
 function displayContact() {
+    // Contacts Main Div
+    var contactDiv = document.createElement('div');
+    contactDiv.classList.add('contact_main_div');
+
+    // Title Header
     var header = document.createElement('h1');
     header.textContent = "Contact";
-    mainframe.appendChild(header)
+
+    // Append Title Header
+    contactDiv.appendChild(header);
+
+    // Email
+    var email_div = document.createElement('div');
+    email_div.classList.add('contact_email_div');
+    var email_h4 = document.createElement('h4');
+    email_h4.textContent = "Email:"
+    var email_a = document.createElement('a');
+    email_a.href = "mailto:tkha@live.com";
+    email_a.textContent = "Tkha@live.com";
+
+    // Append Email
+    email_div.appendChild(email_h4);
+    email_div.appendChild(email_a);
+    contactDiv.appendChild(email_div);
+
+    // Phone
+    var phone_div = document.createElement('div');
+    phone_div.classList.add('contact_phone_div');
+    var phone_h4 = document.createElement('h4');
+    phone_h4.textContent = "Tel:"
+    var phone_a = document.createElement('a');
+    phone_a.href = "tel:+17742725064";
+    phone_a.textContent = "+1 (774) 272-5064";
+
+    // Append Phone
+    phone_div.appendChild(phone_h4);
+    phone_div.appendChild(phone_a);
+    contactDiv.appendChild(phone_div);
+
+    // LinkedIn
+    var linkedin_div = document.createElement('div');
+    linkedin_div.classList.add('contact_linkedin_div');
+    var linkedin_h4 = document.createElement('h4');
+    linkedin_h4.textContent = "LinkedIn:"
+    var linkedIn_a = document.createElement('a');
+    linkedIn_a.href = "https://www.linkedin.com/in/thanhkha/";
+    linkedIn_a.textContent = "https://www.LinkedIn.com/in/ThanhKha/";
+
+    // Append LinkedIn
+    linkedin_div.appendChild(linkedin_h4);
+    linkedin_div.appendChild(linkedIn_a);
+    contactDiv.appendChild(linkedin_div);
+
+    // Append Contact Div
+    mainframe.appendChild(contactDiv);
+
 }
