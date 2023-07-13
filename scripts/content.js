@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 async function getJST() {
-    fetch("http://worldtimeapi.org/api/timezone/Japan")
+    fetch("https://worldtimeapi.org/api/timezone/Japan")
     .then(response => response.json())
     .then(data => {
         const now = data.datetime;
@@ -174,37 +174,24 @@ function displayExperiences() {
         var desc2 = document.createElement('p');
         desc2.textContent = "I have gained a wealth of experience in various aspects of the LTE-over-space satellite system. "
         + "This includes working with Network Equipment (NWE), Radio Frequency Equipment (RFE), and core algorithms such as the MAC scheduler. "
-        + "Additionally, I have taken on the responsibility of Test Director, managing our customers and team on a daily basis."; 
-        
+        + "Additionally, I have taken on the responsibility of Test Director, managing our customers and team on a daily basis. "; 
+        var desc3 = document.createElement('p');
+        desc3.textContent = "Prior to Japan, I've delivered the Network Equipment (NWE) aspects of system. "
+        + "My responsibilities included ensuring the implementations meets System Requirements Specification (SRS). "
+        + "I conducted verification tests on various NWE features, such as the GUI Monitor and Control, backup functionality, and mesh structure. "
+        + "I would also use Wireshark to assist with verification for analyzing packet information that are transported between components. "
+        var desc4 = document.createElement('p');
+        desc4.textContent = "I have also extensively worked on the Radio Frequency Equipment (RFE). "
+        + "Our system requires being able to handle various scenarios, such as signal loss or degradation. "
+        + "To simulate and test these scenarios, I used RF tools such as the Satellite-Link Emulator and Spectrum Analyzer. "
+        + "I've also worked closely with the Scheduler (MAC) developers to ensure that the system is able to handle such cases effectively. ";
+
         // Append description 
         descDiv.appendChild(desc1);
         descDiv.appendChild(desc2);
+        descDiv.appendChild(desc3);
+        descDiv.appendChild(desc4);
         centerDiv.appendChild(descDiv);
-
-        // (EXP-2 - Lockheed Martin) SA-Image
-        var image2 = document.createElement('img');
-        image2.src = "/images/sa.jpg";
-        image2.classList.add('experiences_image');
-
-        // Append sa-image 
-        centerDiv.appendChild(image2);
-
-        // (EXP-2 - Lockheed Martin) Description
-        var descDiv2 = document.createElement('div');
-        descDiv2.classList.add('experiences_desc_div');
-        var desc3 = document.createElement('p');
-        desc3.textContent = "Prior to my time in Japan, I gained extensive experience in creating verification procedures and collaborating closely with developers to verify and debug various aspects of the system specifications and capabilities. "
-            + "This involved possessing a broad knowledge and understanding of the LTE-Over-Space Satellite system. "
-            + "A significant portion of my time was dedicated to testing capabilities, analyzing packet flows using tools like Wireshark, and manipulating signals on the RFE (Radio Frequency Equipment). "
-        var desc4 = document.createElement('p');
-        desc4.textContent = "I took on the role of GUI developer, responsible for creating the monitoring and control interface for the system. "
-            + "Leveraging the SCRUM methodology for development, our team followed a structured approach with weekly sprints that included daily status meetings, code reviews, and code deliveries. "
-            + "We utilized the VUE framework for our projects, enabling efficient development and seamless integration. "
-       
-        // Append description 
-        descDiv2.appendChild(desc3);
-        descDiv2.appendChild(desc4);
-        centerDiv.appendChild(descDiv2);
 
         // (EXP-3 - UofR) Header Div
         var headerDiv3 = document.createElement('div');
