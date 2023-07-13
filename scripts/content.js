@@ -1,5 +1,8 @@
 var mainframe;
 
+// Update JST every second (1000 milliseconds)
+setInterval(getJST, 1000);
+
 document.addEventListener("DOMContentLoaded", function() {
     // Initialize Frames
     mainframe = document.getElementById('content-frame'); 
@@ -15,6 +18,22 @@ document.addEventListener("DOMContentLoaded", function() {
     else
         displayAbout();
 });
+
+async function getJST() {
+    fetch("http://worldtimeapi.org/api/timezone/Japan")
+    .then(response => response.json())
+    .then(data => {
+        const now = data.datetime;
+        const date = new Date(Date.parse(now));
+        const time = date.toLocaleTimeString('en-US', { hour12: true });
+        
+        var displayTime = document.getElementById('navbar-center');
+        displayTime.textContent = "Current Time (JST): " + time;
+    })
+    .catch(error => {
+        console.log('Error:', error);
+    });
+}
 
 function navbarSelect(selection) {
     // Get all navbar items
