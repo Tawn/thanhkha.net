@@ -28,7 +28,7 @@ async function getJST() {
         const time = date.toLocaleTimeString('en-US', { hour12: true });
         
         var displayTime = document.getElementById('navbar-center');
-        displayTime.textContent = "Current Time (JST): " + time;
+        displayTime.textContent = "Japan Time (JST): " + time;
     })
     .catch(error => {
         console.log('Error:', error);
@@ -174,7 +174,7 @@ function displayExperiences() {
         var desc2 = document.createElement('p');
         desc2.textContent = "I have gained a wealth of experience in various aspects of the LTE-over-space satellite system. "
         + "This includes working with Network Equipment (NWE), Radio Frequency Equipment (RFE), and core algorithms such as the MAC scheduler. "
-        + "Additionally, I have taken on the responsibility of Test Director, managing our customers and team on a daily basis. "; 
+        + "Additionally, I have taken on the responsibility of Test Director, managing our customer and team on a daily basis. "; 
         var desc3 = document.createElement('p');
         desc3.textContent = "Prior to Japan, I've delivered the Network Equipment (NWE) aspects of system. "
         + "My responsibilities included ensuring the implementations meets System Requirements Specification (SRS). "
@@ -222,8 +222,8 @@ function displayExperiences() {
         var descDiv3 = document.createElement('div');
         descDiv3.classList.add('experiences_desc_div');
         var desc5 = document.createElement('p');
-        desc5.textContent = "I have always had a knack for coding because I enjoy the creativity involved and have had a passion "
-            + "for experimenting with existing code since my early years. "
+        desc5.textContent = "I have always had a knack for coding from joy of creativeness that's involved "
+            + "and experimenting with existing code since my early years. "
             + "This passion led me to pursue a Bachelor of Science degree in Computer Science at the University of Rochester. "
             + "During my studies, I found great satisfaction in developing websites, applications, games, and solving complex problems, "
             + "which solidified my desire to pursue a career in this field."
@@ -288,33 +288,109 @@ function displayExperiences() {
         
 }
 function displayProjects() {
-    // Projects Main Div
-    var projectstDiv = document.createElement('div');
-    projectstDiv.classList.add('projects_main_div');
+    // Main Div
+    var mainDiv = document.createElement('div');
+    mainDiv.classList.add('experiences_main_div');
 
-    // Title Header
-    var header = document.createElement('h1');
-    header.textContent = "Projects";
+    // Center Div
+    var centerDiv = document.createElement('div');
+    centerDiv.classList.add('experiences_center_div');
 
-    // Append Title Header
-    projectstDiv.appendChild(header);
+    // (Project-1 - Director's Tool) Header Div
+    var headerDiv = document.createElement('div');
+    headerDiv.classList.add('experiences_header_div');
 
-    // GitHub
-    var githubDiv = document.createElement('div');
-    githubDiv.classList.add('contact_linkedin_div');
-    var githubH4 = document.createElement('h4');
-    githubH4.textContent = "GitHub:"
-    var githubA = document.createElement('a');
-    githubA.href = "https://github.com/Tawn";
-    githubA.textContent = "https://Github.com/Tawn";
+    // (Project-1 - Director's Tool) Header
+    var h1 = document.createElement('h1');
+    h1.textContent = "Directors Tool";
 
-    // Append LinkedIn
-    githubDiv.appendChild(githubH4);
-    githubDiv.appendChild(githubA);
-    projectstDiv.appendChild(githubDiv);
+    // Append Headers to Header Div  
+    headerDiv.appendChild(h1);
 
-    // Append Projects Div
-    mainframe.appendChild(projectstDiv);
+    // Append Header Div to Center Div
+    centerDiv.appendChild(headerDiv);
+
+    // (Project-1 - Director's Tool) Image
+    var image = document.createElement('img');
+    image.src = "/images/input.png";
+    image.classList.add('experiences_image');
+
+    // Append image 
+    centerDiv.appendChild(image);
+
+    // (Project-1 - Director's Tool) Description
+    var descDiv = document.createElement('div');
+    descDiv.classList.add('experiences_desc_div');
+    var desc1 = document.createElement('p');
+    desc1.textContent = "Being a Test Director requires a lot of work to be done. "
+    + "This includes managing the test team, planning and coordination, answering customer's question, and lots and lots of documentations. "
+    + "With this amount of responsibilities, I created this tool to ease this processes. "
+    + "Without my tool, I can easily lose track of things, so it's essential I create tools like this to facilitate the Test Director role. "
+
+    // Append description 
+    descDiv.appendChild(desc1);
+    centerDiv.appendChild(descDiv);
+
+    // (Project-1 - Director's Tool) Image2
+    var image2 = document.createElement('img');
+    image2.src = "/images/output.png";
+    image2.classList.add('experiences_image');
+
+    // Append Image2
+    centerDiv.appendChild(image2);
+
+    var descDiv2 = document.createElement('div');
+    descDiv2.classList.add('experiences_desc_div');
+    var desc2 = document.createElement('p');
+    desc2.textContent = "The main feature of this tool is its automatic formatting capability, "
+    + "which facilitates documentation of various activities taking place at the customer's facility. "
+    + "It efficiently tracks tasks, team members, issues, and events as they occur. "
+    + "All inputs are then automatically summarized for end-of-day wrap-up sessions with the customer, "
+    + "meetings with the home (US) team, and management documentation. "
+    + "The output can be easily copied and pasted into a word document, "
+    + "allowing for convenient selection of the entire summary and the use of bullet points or numbering to enhance readability.";
+
+    // Append Description 2
+    descDiv2.appendChild(desc2);
+    centerDiv.appendChild(descDiv2);
+
+    // (Project-1 - Director's Tool) Image3
+    var image3 = document.createElement('img');
+    image3.src = "/images/word-format.png";
+    image3.classList.add('experiences_image');
+
+    // Append Image3
+    centerDiv.appendChild(image3);
+
+    var descDiv3 = document.createElement('div');
+    descDiv3.classList.add('experiences_desc_div');
+    var desc3 = document.createElement('p');
+    desc3.textContent = "This tool was developed using the Python programming language with object-oriented programming (OOP). "
+    + "The Model-View-Controller (MVC) design pattern was utilized to separate the implementation, display, and data components. "
+    + "The GUI (Graphical User Interface) was created using the Tkinter library, while the persistent data storage was achieved using the SQLite library."
+
+    // Append Description 3
+    descDiv3.appendChild(desc3);
+    centerDiv.appendChild(descDiv3);
+
+    // Append Center Div
+    mainDiv.appendChild(centerDiv)
+    // Append Main Div
+    mainframe.appendChild(mainDiv);
+
+    // // Github
+    // var githubDiv = document.createElement('div');
+    // githubDiv.classList.add('contact_linkedin_div');
+    // var githubH4 = document.createElement('h4');
+    // githubH4.textContent = "Github:"
+    // var githubA = document.createElement('a');
+    // githubA.href = "https://github.com/Tawn";
+    // githubA.textContent = "https://Github.com/Tawn";
+
+    // // Append Github
+    // githubDiv.appendChild(githubH4);
+    // githubDiv.appendChild(githubA);
+    // mainframe.appendChild(githubDiv);
 }
 function displayContact() {
     // Contacts Main Div
