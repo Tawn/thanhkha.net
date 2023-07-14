@@ -23,7 +23,13 @@
             <ul class="navbar-right">
                 <li><a class="navbar-item" id="about" onclick="navbarSelect('about')">About</a></li>
                 <li><a class="navbar-item" id="experience" onclick="navbarSelect('experiences')">Experiences</a></li>
-                <li><a class="navbar-item" id="project" onclick="navbarSelect('projects')">Projects</a></li>
+                <div class="dropdown">
+                    <li><a class="navbar-item" class="dropdown" id="project" onclick="navbarSelect('projects')">Projects</a></li>
+                    <div class="projects-dropdown">
+                        <a onclick="projectSelect('github')">Github</a>
+                        <a onclick="projectSelect('director')">Directors Note</a>
+                    </div>
+                </div>
                 <li><a class="navbar-item" id="contact" onclick="navbarSelect('contact')">Contact</a></li>
             </ul>
         </div>
@@ -31,5 +37,8 @@
     <div class="content" id="content-frame"></div>
 
     <script src="scripts/content.js"></script>
+
+
+
 </body>
 </html>

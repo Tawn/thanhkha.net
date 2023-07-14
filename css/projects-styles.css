@@ -1,3 +1,18 @@
 .projects_main_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.projects_center_div {
+    width: 700px;
+}
+
+.projects_github_div {
     display: block;
+    text-align: left;
+}
+
+.projects_image {
+    width: 100%;
 }
