@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function navbarSelect(selection) {
 
     // If a project was selected
-    if (selection == 'github' || selection == 'director' || selection == 'projects') {
+    if (selection == 'github' || selection == 'director' || selection == 'webpage' || selection == 'projects') {
         sessionStorage.setItem('project', selection);
         selection = 'projects'
     }

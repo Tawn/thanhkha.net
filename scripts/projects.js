@@ -11,6 +11,8 @@ function displayProjects(project) {
         displayAllProjects(centerDiv);
     else if (project == 'director') 
         displayDirector(centerDiv);
+    else if (project == 'webpage')
+        displayWebpage(centerDiv);
 
     // Append Center Div
     mainDiv.appendChild(centerDiv)
@@ -114,7 +116,47 @@ function displayDirector(centerDiv) {
     + "The Model-View-Controller (MVC) design pattern was utilized to separate the implementation, display, and data components. "
     + "The GUI (Graphical User Interface) was created using the Tkinter library, while the persistent data storage was achieved using the SQLite library."
 
+    const desc4 = document.createElement('p');
+    desc4.textContent = "Note: This Tool has been modified to remove any private project information. "
+    + "You can view the implementation of my Director Tool in my Github."
+
     // Append Description 3
     descDiv3.appendChild(desc3);
+    descDiv3.appendChild(desc4);
     centerDiv.appendChild(descDiv3);
+}
+
+function displayWebpage(centerDiv) {
+     // (Project-1 - Director's Tool) Header Div
+     const headerDiv = document.createElement('div');
+     headerDiv.classList.add('projects_header_div');
+ 
+     // (Project-1 - Director's Tool) Header
+     const h1 = document.createElement('h1');
+     h1.textContent = "Custom Webpage";
+ 
+     // Append Headers to Header Div  
+     headerDiv.appendChild(h1);
+ 
+     // Append Header Div to Center Div
+     centerDiv.appendChild(headerDiv);
+ 
+     // (Project-2 - Webpage) Description
+     const descDiv = document.createElement('div');
+     descDiv.classList.add('projects_desc_div');
+     const desc1 = document.createElement('p');
+     desc1.textContent = "I created this webpage to present my work and experiences. "
+     + "It is designed to be lightweight with a simple layout, focusing on more recent projects and key work events. "
+     + "The page is built using dynamic HTML5, CSS3, and JavaScript with the Document Object Model (DOM). "
+     + "Additionally, I implemented Asynchronous JavaScript and XML (AJAX) to retrieve the current time in Japan, which is my current location. "
+     + "The navigation selection dynamically clears the content and displays the selected section."
+ 
+
+     const desc2 = document.createElement('p');
+     desc2.textContent = "You can view the implementation of my webpage in my Github."
+
+     // Append description 
+     descDiv.appendChild(desc1);
+     descDiv.appendChild(desc2);
+     centerDiv.appendChild(descDiv);
 }
