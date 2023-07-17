@@ -5,14 +5,38 @@
 }
 
 .projects_center_div {
+    display: block;
+    text-align: center;
     width: 700px;
 }
 
 .projects_github_div {
+    text-align: left    ;
+}
+
+.projects_header_div {
     display: block;
     text-align: left;
 }
 
 .projects_image {
     width: 100%;
+    height: 500px;
+}
+
+.projects_desc_div {
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #666666;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .projects_div_left {
+        width: auto;
+    }
+    
+    .projects_div_right {
+        width: auto;
+    }
 }
